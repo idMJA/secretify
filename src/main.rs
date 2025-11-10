@@ -10,7 +10,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
         .with_max_level(tracing::Level::INFO)
         .init();
 
-    tracing::info!("Starting Spotify secrets extractor...");
+    tracing::info!("Starting secrets extractor...");
 
     match grab_live().await {
         Ok(caps) => {

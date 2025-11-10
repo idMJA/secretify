@@ -1,4 +1,4 @@
-# spotify-secrets
+# secretify
 
 A secrets scraper that monitors and extracts secrets.
 
@@ -33,7 +33,7 @@ Or directly execute the binary:
 
 ## Using the JSON Data
 
-The scraper generates three JSON files that contain extracted Spotify secrets:
+The scraper generates three JSON files that contain extracted secrets:
 
 ### Plain Secrets (array)
 
@@ -85,7 +85,7 @@ The scraper outputs secrets in one of two unified formats:
 
 ```rust
 #[derive(Serialize, Deserialize)]
-struct SpotifySecret {
+struct Secrets {
     version: i32,
     secret: T, // String or Vec<i32>
 }
@@ -94,7 +94,7 @@ struct SpotifySecret {
 **Object/Dict format** (`secretDict.json`):
 
 ```rust
-type SpotifySecretsDict = BTreeMap<String, Vec<i32>>;
+type SecretsDict = BTreeMap<String, Vec<i32>>;
 ```
 
 ### Usage Example (Rust)
