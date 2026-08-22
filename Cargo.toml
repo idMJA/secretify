@@ -4,9 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-serde = { version = "1.0.228", features = ["derive"] }
-serde_json = "1.0.145"
-tokio = { version = "1.48", features = ["rt", "macros", "rt-multi-thread"] }
-headless_chrome = "1.0.18"
-tracing = "0.1"
-tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt", "ansi"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+tokio = { version = "1.53.1", features = ["rt", "macros", "rt-multi-thread"] }
+headless_chrome = "1.0.22"
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt", "ansi"] }
+regex = "1.11"
+reqwest = { version = "0.13", default-features = false, features = ["default-tls", "json"] }
